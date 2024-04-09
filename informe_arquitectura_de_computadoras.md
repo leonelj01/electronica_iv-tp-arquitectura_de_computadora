@@ -2,7 +2,8 @@
 
 Electronica IV - TP - Arquitectura de Computadora
 
-> Aquí tu nombre completo
+### ***Juarez, Gustavo Leonel***
+
 
 ## Introducción
 
@@ -11,6 +12,34 @@ Electronica IV - TP - Arquitectura de Computadora
 > - Define computadora
 > - Define arquitectura de computadoras
 > - Distingue entre microarquitectura, arquitectura y software.
+
+En este informe se desea presentar las ideas mas importantes acerca de lo que es una computadora, como y cuales son sus arquitecturas, 
+como evolucionaron a lo largo de los años, y además, de poder definir y conocer las diferencias entre los parametros que componen una 
+computadora. Por ello ahora realizaremos una breve introduccion a los principaes temas que se abordaran en este informe.
+
+
+> **¿Qué es una computadora?**
+
+Como primer acercamiento podemos dar la siguiente definicion de computadora:
+
+*"Una computadora es una máquina electrónica digital programable que ejecuta una serie de operaciones para procesar los datos de*
+*entrada, obteniendo información que posteriormente se envía a la unidades salida."*
+
+Algunas de las funciones mas sencillas que seria capaz de realizar son:
+* Procesamiento de datos
+* Almacenamiento de datos
+* Movimiento de datos 
+* Control
+
+Entonces una computadora deberia ser capaz de procesar datos que ingresen o salgan de esta, ser capaz de almacenarlos para utilizarlos 
+luego, poder transferir estos datos, es decir, moverlos entre las distintas partes que componen la maquina y poder mantener un control 
+sobre los datos y el estado de los mismos.
+
+De estos conceptos podemos tener una vista preliminar de como funcionaría una computadora:
+![Vista funcional de una computadora](diagrama_computadora.png)
+
+> **¿Qué es la arquitectura de una computadora?**
+
 
 ## Clases de arquitectura de computadora
 
