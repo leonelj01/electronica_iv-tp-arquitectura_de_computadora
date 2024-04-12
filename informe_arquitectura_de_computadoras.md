@@ -118,7 +118,7 @@ al tener un lenguaje mas complejo permite tener una mejor correspondencia a leng
 de errores y modificación del codigo resultante.
 
 ### ***Arquitectura Von Neumann***
-
+![](Arquitectura_neumann.jpg)
 
 ### ***Arquitectura Hardvard***
 
