@@ -1,17 +1,11 @@
-# Informe de Investigación Sobre Arquitectura de Computadoras
+# *Informe de Investigación Sobre Arquitectura de Computadoras*
 
 Electronica IV - TP - Arquitectura de Computadora
 
 ### ***Juarez, Gustavo Leonel***
 
 
-## Introducción
-
-> Fundamentando con citas bibliográficas:
->
-> - Define computadora
-> - Define arquitectura de computadoras
-> - Distingue entre microarquitectura, arquitectura y software.
+## *Introducción*
 
 En este informe se desea presentar las ideas mas importantes acerca de lo que es una computadora, como y cuales son sus arquitecturas, 
 como evolucionaron a lo largo de los años, y además, de poder definir y conocer las diferencias entre los parametros que componen una 
@@ -40,8 +34,18 @@ De estos conceptos podemos tener una vista preliminar de como funcionaría una c
 
 > **¿Qué es la arquitectura de una computadora?**
 
+Según Hennessy y patterson, la arquitectura de una computadora es la interface entre el softeware de bajo nivel y el hardware, indicando
+que es la que posibilita implementaciones de diversos coste/rendimiento en la que corre el software principal. La arquitectura debe contener
+todo lo que los programadores necesitan conocer para que el programa SW (lenguaje maquina) funcione correctamente. 
 
-## Clases de arquitectura de computadora
+Asi al estudiar la estructura que tiene un computador podemos determinar las unidades operacionales que utilizará, como así tambien las
+formas de relacionarlas para que implementen las especificaciones deseadas. Algunos de los atributos de la estructura son:
+* Las señales de control.
+* Interfaces entre el computador y los perifericos.
+* La tecnologia de memoria utilizada.
+* El tipo de operadores aritmeticos seleccionado.
+
+## *Clases de arquitectura de computadora*
 
 > Fundamentando con citas bibliográficas:
 >
@@ -49,6 +53,75 @@ De estos conceptos podemos tener una vista preliminar de como funcionaría una c
 > - Discute para cada tipo sus características distintivas, ventajas y desventajas
 > - Considera *al menos* lo siguiente: máquina de pila, máquina de registros y máquina de acumulador; RISC y CISC; Von Newmann y Harvard
 > - Sitúa en este contexto la arquitectura ARMv7M
+
+Como ya se explico anteriormente la arquitectura de una computadora establece la organizacion de los distintos elementos fisicos que componen
+a la computadora (o algun elemento de esta) y a su vez la relacion que estos tendrán con el software principal y sobre todo el lenguaje de la 
+maquina. Por lo tanto, dependiendo del tipo de arquitectura que tenga la computadora, esta se diferenciara de otras en terminos de costo, 
+rendimiento y de la forma en que sus partes se interralacionan.
+
+Algunas de las arquitecturas mas conocidas en la actualidad son:
++ La maquina de Pila
++ La maquina de registros y de acumulador
++ RISC
++ CISC
++ La arquitectura Von Neumann
++ La arquitectura Harvard
+
+### ***Maquina de pila***
+
+Este tipo de arquitectura proviene de organizar los operandos que procesa el CPU en una pila, como su nombre lo indica. Esta organizacion consiste
+en el algoritmo LIFO (Last In, First Out). La pila es un conjunto ordenado de tamaño variable desde elementos que accede solamente desde su cabecera
+o Stacker Point (SP).
+
+Trabaja basicamente con dos opciones implementadas con las sentencias PUSH (apilar un elemento) y POP (sacar un elemento). Las operaciones se realizan
+con la SP o cabecera. Cabe recalcar que no es necesario definir una direccion en este tipo de arquitectura, ya que de manera implicita el operando o dato
+esta en la cima de la pila.
+
+En la siguiente imagen podemos ver un diagrama de la maquina de pilas:
+![](pila.png)
+
+Esta arquitectura permite un modelo sencillo para la evaluacion de los procesos realizados y consta además de instrucciones cortas las cuales pueden generar
+una buena densidad de codigo. Pero este tipo de arquitectura no permite su acceso de manera aleatoria a los datos guardados, esta limitación no permite
+lograr un codigo eficiente, tambien dificulta una implementacion de manera eficiente ya que la pila llega a ser un cuello de botella, ya que su forma de
+operar puede llegar a ser demasiado lenta e ineficiente si se trabaja con una gran variedad de datos.
+
+### ***Maquina de registros y de acumulador***
+La arquitectura de acumulador es un tipo de registro que consiste en guardar los datos de la memoria en un lugar denominado acumulador, donde todos los
+procesos que se realicen se diseñan para producirse directamente en este, además de ser el lugar donde luego se guardarán. La ubicacion de los datos es 
+implicita pues el unico lugar donde se guardan es en el acumulador, por esta razon se considera util debido a su simplicidad y a su facil implementación.
+Pero esta arquitectura en terminos de rendimiento es ineficiente, ya que tener todos los datos guardados en un solo lugar dificulta el procesamiento de
+los mismos, puesto que el acumulador es un espacio de memoria temporal generando que el trafico de memoria sea el mas alto entre las aquitecturas.
+
+Por ello para solucionar estos problemas se utilizo la maquina de registros de proposito general, esta arquitectura permitia una organizacion explicita 
+de los datos ya que se almacenaba en direcciones de memoria a diferencia de las anteriores estructuras. Esta organizacion permitia una ordenación más
+flexible que las pilas y los acumuladores a la hora de evaluar las expresiones debido a que utilizan variables para contener los datos. Cuando las variables
+estan ubicadas en los registros se reduce el trafico de memoria, se acelera el programa y mejora la densidad de codigo. Una de sus principales desventajas 
+es la complejidad que poseen en su realizacion, ya que su codigo o su forma de operar no es tan sencilla o directa como los anteriores.
+
+### ***RISC y CISC***
+Un conjunto de instrucciones es la especificacion de las intrucciones que la CPU puede entender y ejecutar, estas son los comandos basicos que la CPU utiliza
+para llevar a cabo tareas especificas. Las intrucciones de este conjunto suelen ser operaciones basicas como sumar, restar, cargar datos, etc. 
+Entre los conjuntos de intrucciones destacan principalmente dos:
+
+* RISC (Reduced Instruction Set Computing)
+
+Es un pequeño conjunto de instrucciones las cuales cada una se puede ejecutar en casi la misma cantidad de tiempo, normalmente en un ciclo de reloj. Consiste
+en instrucciones sencillas y especificas permitiendo que la CPU puede trabajar de una manera eficiente y con un alto rendimiento, debido a su sencillez el 
+codigo que especifican las intrucciones suele ser extenso, ya que se deben definir cada instruccion a realizar. Su uso suele estar asignado a microprocesadores
+o microcontroladores que se ocupan de tareas simples y sencillas.
+
+* CISC (Complex Instruction Set Computing)
+
+Es un conjunto de instrucciones mas amplio y complejo que las RISC, por esta razon necesitan un mayor tiempo a la hora de su ejecución (mas de cinco ciclos de reloj),
+son capaces de realizar multiples operaciones en una sola intruccion por lo que su codigo es mas compacto generando que su requerimiento de almacenamiento sea menor,
+al tener un lenguaje mas complejo permite tener una mejor correspondencia a lenguajes de alto nivel logrando así facilitar la compilación de los programas, la corrección
+de errores y modificación del codigo resultante.
+
+### ***Arquitectura Von Neumann***
+
+
+### ***Arquitectura Hardvard***
+
 
 ## Partes de una arquitectura de computadora
 
