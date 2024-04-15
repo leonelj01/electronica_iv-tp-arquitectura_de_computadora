@@ -122,6 +122,12 @@ de errores y modificación del codigo resultante.
 
 ### ***Arquitectura Hardvard***
 
+### ***ARMv7M***
+
+La arquitectura ARMv7M es una arquitectura de procesador diseñada especialmente para aplicaciones de microcontraladores y sistemas embebidos de bajo costo, esta se caracteriza por su eficiciencia y bajo
+consumo de energia, esto se debe a que utiliza una arquitectura RISC para procesar sus datos, combinando intrucciones de 16 y 32 bits para mejorar la eficiencia del codigo.
+Esto hace que esta arquitectura sea una buena opcion cuando se busca un equilibrio entre rendimiento, eficiencia energética y flexibilidad en entornos embebidos, aun así 
+se puede ver superada cuando se trata de aplicaciones que requieran un cómputo mas intensivo.
 
 ## Partes de una arquitectura de computadora
 
@@ -129,6 +135,40 @@ de errores y modificación del codigo resultante.
 >
 > - Explica las distintas partes de una arquitectura de computadora
 > - Analiza a la luz de lo desarrollado la arquitectura ARMv7M
+
+### Partes de una Arquitectura de Computadora:
+
+Las partes que conforman la arquitectura de una computadora son:
+
++ **Unidad Central de Procesamiento (CPU)**:
+   
+La CPU es el núcleo de la computadora, responsable de ejecutar instrucciones y procesar datos. Según Tanenbaum y Bos, "La CPU de una computadora es la parte de la computadora que realiza la mayoría de los cálculos y controla el resto del sistema". (Tanenbaum & Bos, 2014).
+
++ **Memoria**:
+   
+La memoria almacena datos y programas que la CPU necesita para realizar sus operaciones. Según Hennessy y Patterson, "La memoria es una colección de celdas numeradas, cada una de las cuales contiene un byte de información y cada una tiene una dirección única". (Hennessy & Patterson, 2017).
+
++ **Unidad de Control (UC)**:
+   
+La UC coordina las operaciones de la CPU, interpretando y ejecutando instrucciones. Según Patterson y Hennessy, "La unidad de control (UC) secuencia las operaciones, decodifica las instrucciones y genera las señales de control necesarias para ejecutarlas". (Patterson & Hennessy, 2017).
+
++ **Unidad Aritmético-Lógica (ALU)**:
+   
+La ALU realiza operaciones aritméticas y lógicas en los datos. Según Stallings, "La unidad aritmético-lógica (ALU) realiza las operaciones aritméticas (como la suma y la resta) y las operaciones lógicas (como AND, OR y NOT)". (Stallings, 2019).
+
++ **Buses**:
+Los buses son canales de comunicación que permiten la transferencia de datos entre los diferentes componentes del sistema. Según Hennessy y Patterson, "Los buses son conjuntos de cables o caminos de comunicación a través de los cuales se pueden transferir los datos". (Hennessy & Patterson, 2017).
+
++ **Dispositivos de Entrada/Salida (E/S)**:
+   
+Los dispositivos de E/S permiten la interacción entre la computadora y el usuario o el mundo exterior. Según Tanenbaum y Bos, "Los dispositivos de entrada y salida permiten que una computadora se comunique con el mundo exterior". (Tanenbaum & Bos, 2014).
+
+### Análisis de la Arquitectura ARMv7M:
+
+La arquitectura ARMv7M es una arquitectura de conjunto de instrucciones (ISA) diseñada para sistemas embebidos de bajo consumo energético y alta eficiencia en aplicaciones como microcontroladores. Incorpora características específicas para sistemas embebidos, como modos de bajo consumo y operaciones en tiempo real.
+Comparado con las arquitecturas más tradicionales de propósito general, como x86, ARMv7M se destaca por su eficiencia energética y su arquitectura de baja potencia. Esto lo hace ideal para dispositivos portátiles y sistemas embebidos donde la duración de la batería y el rendimiento son críticos.
+La arquitectura ARMv7M sigue los principios fundamentales de la arquitectura de von Neumann, con una CPU que ejecuta instrucciones almacenadas en memoria. Sin embargo, se adapta específicamente a las necesidades de los sistemas embebidos al ofrecer modos de bajo consumo y operaciones en tiempo real.
+En resumen, la arquitectura ARMv7M es una evolución de las arquitecturas de computadoras tradicionales, adaptada para satisfacer las demandas de eficiencia energética y rendimiento en sistemas embebidos y dispositivos portátiles.
 
 ## Conclusiones
 
