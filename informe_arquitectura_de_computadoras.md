@@ -117,10 +117,11 @@ son capaces de realizar multiples operaciones en una sola intruccion por lo que 
 al tener un lenguaje mas complejo permite tener una mejor correspondencia a lenguajes de alto nivel logrando así facilitar la compilación de los programas, la corrección
 de errores y modificación del codigo resultante.
 
-### ***Arquitectura Von Neumann***
-![](Arquitectura_neumann.jpg)
+### ***Arquitectura Von Neumann y Hardvard***
 
-### ***Arquitectura Hardvard***
+La arquitectura Von Neumann establece una organizacion de los componentes de la computadora, cuenta con el microprocesador y  una celda de memoria para almacenar los datos y de donde lee las intrucciones, esta arquitectura tiene la particularidad de que cuenta con un unico bus de datos para que el micro pueda comunicarse con la memoria y otros modulos que posea la arquitectura (como los modulos de entrada y salida), por ello esta arquitectura es menos eficiente temporalmente en comparación a la Hardvard, ya que requiere mas tiempo para procesar cada instrucción que utilice debido a que solo puede ejecutar una instruccion a la vez pero esta organizacion la hace mas economica. En cambio la arquitectura Hardvard posee una distribución que cuenta con dos celdas de memoria una para los datos y la otra para las intrucciones, con lo cual cuenta con mas buses de datos que la Von Neumann permitiendo que realice operaciones en simultaneo, es decir, mientras guarda datos o realiza una tarea va procesando la siguiente instrucción con lo cual logra una mayor eficiencia pero debido a que sus memorias estan separadas su costo incrementa.
+![](Von.png) 
+![](Hardvard.png)
 
 ### ***ARMv7M***
 
@@ -131,37 +132,27 @@ se puede ver superada cuando se trata de aplicaciones que requieran un cómputo 
 
 ## Partes de una arquitectura de computadora
 
-> Fundamentando con citas bibliográficas:
->
-> - Explica las distintas partes de una arquitectura de computadora
-> - Analiza a la luz de lo desarrollado la arquitectura ARMv7M
-
 ### Partes de una Arquitectura de Computadora:
 
 Las partes que conforman la arquitectura de una computadora son:
 
-+ **Unidad Central de Procesamiento (CPU)**:
-   
-La CPU es el núcleo de la computadora, responsable de ejecutar instrucciones y procesar datos. Según Tanenbaum y Bos, "La CPU de una computadora es la parte de la computadora que realiza la mayoría de los cálculos y controla el resto del sistema". (Tanenbaum & Bos, 2014).
++ **Unidad Central de Procesamiento (CPU)**: 
+La CPU es el núcleo de la computadora, responsable de ejecutar instrucciones y procesar datos. Según Tanenbaum y Bos, "La CPU de una computadora es la parte de la computadora que realiza la mayoría de los cálculos y controla el resto del sistema". (Hennessy & Patterson, 2011).
 
 + **Memoria**:
-   
-La memoria almacena datos y programas que la CPU necesita para realizar sus operaciones. Según Hennessy y Patterson, "La memoria es una colección de celdas numeradas, cada una de las cuales contiene un byte de información y cada una tiene una dirección única". (Hennessy & Patterson, 2017).
+La memoria almacena datos y programas que la CPU necesita para realizar sus operaciones. Según Hennessy y Patterson, "La memoria es una colección de celdas numeradas, cada una de las cuales contiene un byte de información y cada una tiene una dirección única". (Hennessy & Patterson, 2011).
 
 + **Unidad de Control (UC)**:
-   
-La UC coordina las operaciones de la CPU, interpretando y ejecutando instrucciones. Según Patterson y Hennessy, "La unidad de control (UC) secuencia las operaciones, decodifica las instrucciones y genera las señales de control necesarias para ejecutarlas". (Patterson & Hennessy, 2017).
+La UC coordina las operaciones de la CPU, interpretando y ejecutando instrucciones. Según Patterson y Hennessy, "La unidad de control (UC) secuencia las operaciones, decodifica las instrucciones y genera las señales de control necesarias para ejecutarlas". (Patterson & Hennessy, 2011).
 
-+ **Unidad Aritmético-Lógica (ALU)**:
-   
-La ALU realiza operaciones aritméticas y lógicas en los datos. Según Stallings, "La unidad aritmético-lógica (ALU) realiza las operaciones aritméticas (como la suma y la resta) y las operaciones lógicas (como AND, OR y NOT)". (Stallings, 2019).
++ **Unidad Aritmético-Lógica (ALU)**: 
+La ALU realiza operaciones aritméticas y lógicas en los datos. Según Stallings, "La unidad aritmético-lógica (ALU) realiza las operaciones aritméticas (como la suma y la resta) y las operaciones lógicas (como AND, OR y NOT)". (Stallings, 2007).
 
 + **Buses**:
-Los buses son canales de comunicación que permiten la transferencia de datos entre los diferentes componentes del sistema. Según Hennessy y Patterson, "Los buses son conjuntos de cables o caminos de comunicación a través de los cuales se pueden transferir los datos". (Hennessy & Patterson, 2017).
+Los buses son canales de comunicación que permiten la transferencia de datos entre los diferentes componentes del sistema. Según Hennessy y Patterson, "Los buses son conjuntos de cables o caminos de comunicación a través de los cuales se pueden transferir los datos". (Hennessy & Patterson, 2011).
 
 + **Dispositivos de Entrada/Salida (E/S)**:
-   
-Los dispositivos de E/S permiten la interacción entre la computadora y el usuario o el mundo exterior. Según Tanenbaum y Bos, "Los dispositivos de entrada y salida permiten que una computadora se comunique con el mundo exterior". (Tanenbaum & Bos, 2014).
+Los dispositivos de E/S permiten la interacción entre la computadora y el usuario o el mundo exterior. Según Tanenbaum y Bos, "Los dispositivos de entrada y salida permiten que una computadora se comunique con el mundo exterior". (Behrooz Parhami, 2007).
 
 ### Análisis de la Arquitectura ARMv7M:
 
@@ -181,6 +172,14 @@ En resumen, la arquitectura ARMv7M es una evolución de las arquitecturas de com
 >
 > *Nota:* El contenido de este capítulo expone lo que aprendiste durante la investigación para desarrollar este práctico. Es un espacio para tu propia reflexión. Intenta exponer tus propias ideas, tal vez sea bueno hacerlo luego de apartarte unas horas del material de referencia para evitar seguir demasiado de cerca una fuente particular.
 
+La arquitectura de computadoras define como estan organizados los distintos elementos que componen la estructura principal de esta y como se relacionan entre ellos, además de definir como se relacionan con el codigo que controla las distintas intrucciones internas del sistema informatico.
+En la jerarquia que posee un sistema informatico, la arquitectura es la base de esta por ello ocupa una posicion principal. A partir de esta se erigen todas las demas capas, ya que esta definirá como se relacionarán los componentes, que intrucciones se ejecutarán y gestionará los recursos a utilizar.
+A la hora de elegir que arquitectura utilizar es indispensable evaluar para que fin será utilizada y a partir de esto identificar cual es apta para lo requerido, basandose en la eficiencia, el consumo de energia, la complejidad del proyecto (en terminos de armado y codificación), compatibilidad con el codigo a utilizar, etc.
+
+
 ## Bibliografía
 
-> Aquí listarás todas las fuentes bibliográficas citadas. Sigue para tus citas y referencias las [normas de la APA](https://normas-apa.org/citas/), usando *citas parrafraseadas* en el texto.
+* "Estructura y diseño de computadoras: La interfaz Hardware/Software", (4ta edicón, 2011). Patterson & Hennessy.
+* "Arquitectura de computadoras: de los microprocesadores a las supercomputadoras", (2da edicíon, 2007). Behrooz Parhami.
+* "Organizacion y arquitectura de computadores", (7ma edición, 2007), William Stallings
+* Algunos videos sobre "Arquitectura de computadoras".
